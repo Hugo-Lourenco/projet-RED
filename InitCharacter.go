@@ -2,14 +2,19 @@ package projetred
 
 import "fmt"
 
-func InitCharacter() Character{
+func InitCharacter() Character {
 	var nom string
-	fmt.Print("Entrez votre nom :")
+	fmt.Print("Entrez votre nom : ")
 	fmt.Scanln(&nom)
-	fmt.Printf("nom choisi : %s\n", nom)
-	
-	tmpl := NewChevalierTemplate()
-	character := tmpl.CreateCharacter(nom)
-	
-	return character
+
+	var choix string
+	fmt.Print("Choisissez une classe (chevalier/magicien) : ")
+	fmt.Scanln(&choix)
+
+	switch choix {
+	case "magicien", "Mage":
+		return NewMagicienCharacter(nom)
+	default:
+		return NewChevalierCharacter(nom)
+	}
 }
