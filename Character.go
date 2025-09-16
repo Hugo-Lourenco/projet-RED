@@ -6,5 +6,6 @@ type Character struct {
 	niveau	int
 	PV_max	int
 	PV	int
+	attaque	int
 	inventaire	[]string
 }
