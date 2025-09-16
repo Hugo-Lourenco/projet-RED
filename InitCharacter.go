@@ -31,7 +31,7 @@ func formatName(s string) string {
     return string(runes)
 }
 
-func InitCharacter() Character {
+func InitCharacter() {
     reader := bufio.NewReader(os.Stdin)
 
     fmt.Print("Entrez votre nom : ")
@@ -45,9 +45,11 @@ func InitCharacter() Character {
 
         switch choix {
         case "magicien", "mage":
-            return NewMagicienCharacter(nom)
+            c1 = NewMagicienCharacter(nom)
+            DisplayInfo(c1)
         case "chevalier":
-            return NewChevalierCharacter(nom)
+            c1 = NewChevalierCharacter(nom)
+            DisplayInfo(c1)
         default:
             fmt.Println("Classe inexistante — choisissez parmi : chevalier, magicien")
         }

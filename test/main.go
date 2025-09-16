@@ -13,4 +13,5 @@ func main() {
     // les champs exportés si tu veux les afficher ici.
     _ = char
     fmt.Println("Jeu démarré.")
+    
 }
