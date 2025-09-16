@@ -1,11 +1,12 @@
 package projetred
 
 type Character struct {
-	nom	string
-	classe	string
-	niveau	int
+	Nom	string
+	Classe	string
+	Niveau	int
 	PV_max	int
 	PV	int
-	attaque	int
-	inventaire	[]string
+	Attaque	int
+	Inventaire	[]string
 }
+var c1 Character
