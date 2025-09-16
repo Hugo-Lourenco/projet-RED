@@ -1,31 +1,25 @@
 package projetred
 
-type Chevalier struct {
-	Nom         string
-	BasePV      int
-	PVParNiveau int
-	AttaqueBase int
+func NewChevalierCharacter(nom string) Character {
+    return Character{
+        nom:        nom,
+        classe:     "Chevalier",
+        niveau:     1,
+        PV_max:     100,
+        PV:         50,
+        attaque:    6,
+        inventaire: []string{},
+    }
 }
 
-func NewChevalierTemplate() Chevalier {
-	return Chevalier{
-		Nom:         "Chevalier",
-		BasePV:      40,
-		PVParNiveau: 8,
-		AttaqueBase: 6,
-	}
+func NewMagicienCharacter(nom string) Character {
+    return Character{
+        nom:        nom,
+        classe:     "Magicien",
+        niveau:     1,
+        PV_max:     90,
+        PV:         40,
+        attaque:    8,
+        inventaire: []string{},
+    }
 }
-
-func (tmpl Chevalier) CreateCharacter(nomJoueur string) Character {
-	return Character{
-		nom:        nomJoueur,
-		classe:     tmpl.Nom,
-		niveau:     1,
-		PV_max:     tmpl.BasePV,
-		PV:         tmpl.BasePV,
-		attaque:    tmpl.AttaqueBase,
-		inventaire: []string{},
-	}
-}
-
-
