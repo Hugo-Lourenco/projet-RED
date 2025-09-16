@@ -19,7 +19,7 @@ func Menu() {
 
     switch choice {
     case "1":
-        DisplayInfo(c1)
+        DisplayInfo()
     case "2":
         accessInventory(c1)
     case "3":
