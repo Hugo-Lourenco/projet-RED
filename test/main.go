@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-    char := projetred.InitCharacter()
-    projetred.DisplayInfo(char)
+    _ = projetred.InitCharacter()
+    projetred.DisplayInfo()
     fmt.Println("Jeu démarré.")
 }
