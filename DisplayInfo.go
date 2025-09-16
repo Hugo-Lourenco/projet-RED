@@ -2,7 +2,7 @@ package projetred
 
 import "fmt"
 
-func DisplayInfo(c1 Character) {
+func DisplayInfo() {
 	fmt.Println("Nom du personnage : ", c1.Nom)
 	fmt.Println("Classe : ", c1.Classe)
 	fmt.Println("Niveau du personnage : ", c1.Niveau)
