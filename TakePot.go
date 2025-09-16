@@ -1,6 +1,6 @@
 package projetred
 
-func takePot(c1 *Character) {
+func takePot(c1 Character) {
 	for i := 0; i < len(c1.Inventaire); i++ {
 		if c1.Inventaire[i] == "potion de soin" {
 			c1.PV += 50
