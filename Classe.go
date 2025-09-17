@@ -11,6 +11,7 @@ func NewChevalierCharacter(nom string) Character {
 		Attaque:    6,
 		Or:	100,
 		Inventaire: []string{},
+		Max_Inv: 	10,
 	}
 	c1.Skills = []Skill{HeavyAttack{Bonus: 4}}
 	return c1
@@ -26,6 +27,7 @@ func NewMagicienCharacter(nom string) Character {
 		Attaque:    8,
 		Or: 	100,
 		Inventaire: []string{},
+		Max_Inv: 	10,
 	}
 	c1.Skills = []Skill{Fireball{Bonus: 6}}
 	return c1
