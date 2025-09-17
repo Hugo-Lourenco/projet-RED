@@ -18,16 +18,19 @@ func Menu() {
     choice, _ := reader.ReadString('\n')
     choice = strings.TrimSpace(choice)
 
-    switch choice {
-    case "1":
-        DisplayInfo()
-    case "2":
-        accessInventory(c1)
-    case "3":
-        os.Exit(0)
-    case "4" : 
-        Marchand()
-    default:
-        fmt.Println("Choix invalide.")
+    for {
+        switch choice {
+        case "1":
+            DisplayInfo()
+        case "2":
+            accessInventory(c1)
+        case "3":
+          os.Exit(0)
+        case "4" : 
+            Marchand()
+        default:
+            fmt.Println("Choix invalide.")
+        continue 
+        }
     }
 }
