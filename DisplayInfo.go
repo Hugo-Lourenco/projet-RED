@@ -3,10 +3,8 @@ package projetred
 import "fmt"
 
 func DisplayInfo() {
-	fmt.Println("Nom du personnage : ", c1.Nom)
-	fmt.Println("Classe : ", c1.Classe)
-	fmt.Println("Niveau du personnage : ", c1.Niveau)
-	fmt.Println("Points de vie : ", c1.PV, "/", c1.PV_max)
-	fmt.Println("Points de dégâts : ", c1.Attaque)
-	fmt.Println("Or : ", c1.Or)
+	fmt.Println("================= AVENTURE =================")
+    fmt.Printf("Joueur: %s  | Classe: %s  | Niveau: %d\n", c1.Nom, c1.Classe, c1.Niveau)
+    fmt.Printf("PV: %d/%d  | Attaque: %d  | Or: %d\n", c1.PV, c1.PV_max, c1.Attaque, c1.Or)
+    fmt.Println("============================================")
 }
