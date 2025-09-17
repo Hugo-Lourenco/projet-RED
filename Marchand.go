@@ -23,7 +23,9 @@ func Marchand() {
 		fmt.Println("2) Épée en bois à 40 pièces d'or")
 		fmt.Println("3) Livre de magie réservé aux magiciens à 50 pièces d'or")
 		fmt.Println("4) Épée en fer à 120 pièces d'or")
-		fmt.Println("5) Sac à dos à 50")
+		if C1.Max_Inv < 40 {
+			fmt.Println("5) Sac à dos à 50")
+		}
 		fmt.Println("6) Retour")
 
 		choixRaw, _ := reader.ReadString('\n')
@@ -70,10 +72,10 @@ func Marchand() {
 				continue
 			}
 		case "5", "Sac à dos":
-		if C1.Or >= 120 {
-			C1.Or -= 120
-			C1.Inventaire = append(C1.Inventaire, "Épée en fer")
-			fmt.Println("Vous avez reçu une épée en fer!")
+		if C1.Or >= 50 {
+			C1.Or -= 50
+			C1.Max_Inv += 10
+			fmt.Println("Vous avez reçu un sac à dos!")
 		} else {
 			fmt.Println("Vous n'avez pas assez de pièces d'or")
 			continue
