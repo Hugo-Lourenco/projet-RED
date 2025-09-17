@@ -8,4 +8,5 @@ func DisplayInfo() {
 	fmt.Println("Niveau du personnage : ", c1.Niveau)
 	fmt.Println("Points de vie : ", c1.PV, "/", c1.PV_max)
 	fmt.Println("Points de dégâts : ", c1.Attaque)
+	fmt.Println("Or : ", c1.Or)
 }
