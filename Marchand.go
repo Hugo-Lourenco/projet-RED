@@ -21,7 +21,7 @@ func Marchand() {
 			fmt.Println("Que voulez-vous acheter ?")
 			fmt.Print("1) Potion de soin à 20 pièces d'or ")
 			fmt.Println("2) Épée en bois à 40 pièces d'or")
-			fmt.Println("3) Livre de magie réservé magiciens à 50 pièces d'or")
+			fmt.Println("3) Livre de magie réservé aux magiciens à 50 pièces d'or")
 			fmt.Println("4) Épée en fer à 120 pièces d'or")
 
 			choixRaw, _ := reader.ReadString('\n')
