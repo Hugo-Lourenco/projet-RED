@@ -1,12 +1,30 @@
 package main
 
 import (
-    "fmt"
-    "projetred"
+	"bufio"
+	"fmt"
+	"os"
+	"projetred"
 )
 
+func clearScreen() {
+	for i := 0; i < 50; i++ {
+		fmt.Println()
+	}
+}
+
 func main() {
-    _ = projetred.InitCharacter()
-    projetred.DisplayInfo()
-    fmt.Println("Jeu démarré.")
+	projetred.C1 = projetred.InitCharacter()
+
+	reader := bufio.NewReader(os.Stdin)
+
+	for {
+		clearScreen()
+		projetred.DisplayInfo()
+
+		projetred.Menu()
+
+		fmt.Print("Appuyez sur Entrée pour continuer...")
+		_, _ = reader.ReadString('\n')
+	}
 }

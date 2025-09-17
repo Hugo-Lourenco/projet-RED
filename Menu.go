@@ -24,7 +24,7 @@ func Menu() {
         case "1":
             DisplayInfo()
         case "2":
-            accessInventory(c1)
+            accessInventory(C1)
         case "3":
             Marchand()
         case "4" : 

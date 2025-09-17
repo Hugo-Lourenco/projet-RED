@@ -53,7 +53,7 @@ func InitCharacter() Character {
             fmt.Println("Classe inexistante — choisissez parmi : chevalier, magicien")
             continue
         }
-        c1 = char
+        C1 = char
 
         return char
     }

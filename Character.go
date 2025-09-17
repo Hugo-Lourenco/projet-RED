@@ -11,4 +11,4 @@ type Character struct {
 	Inventaire	[]string
 	Skills 		[]Skill
 }
-var c1 Character
+var C1 Character
