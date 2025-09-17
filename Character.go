@@ -10,5 +10,6 @@ type Character struct {
 	Or 			int 
 	Inventaire	[]string
 	Skills 		[]Skill
+	Max_Inv		int
 }
 var C1 Character
