@@ -13,7 +13,7 @@ func Menu() {
     fmt.Println("1) Information perso")
     fmt.Println("2) Inventaire")
     fmt.Println("3) Quitter")
-    fmt.Println(") Marchand")
+    fmt.Println("4) Marchand")
     fmt.Print("Choix 1, 2 , 3 ou 4 ? ")
     choice, _ := reader.ReadString('\n')
     choice = strings.TrimSpace(choice)
@@ -25,9 +25,9 @@ func Menu() {
         case "2":
             accessInventory(c1)
         case "3":
-          os.Exit(0)
-        case "4" : 
             Marchand()
+        case "4" : 
+            os.Exit(0)
         default:
             fmt.Println("Choix invalide.")
         continue 
