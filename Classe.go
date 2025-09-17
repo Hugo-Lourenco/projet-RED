@@ -8,6 +8,7 @@ func NewChevalierCharacter(nom string) Character {
 		PV_max:     100,
 		PV:         50,
 		Attaque:    6,
+		Or :		100,
 		Inventaire: []string{},
 	}
 }
