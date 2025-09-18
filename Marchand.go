@@ -87,8 +87,8 @@ func Marchand() {
 		case "6", "Potion de poison":
 			if C1.Or >= 20 {
 				C1.Or -= 20
-				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
-				fmt.Println("Vous avez reçu une Potion de soin!")
+				C1.Inventaire = append(C1.Inventaire, "Potion de poison")
+				fmt.Println("Vous avez reçu une potion de poison!")
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
@@ -96,8 +96,8 @@ func Marchand() {
 		case "7", "Chapeau de l'aventure":
 			if C1.Or >= 20 {
 				C1.Or -= 20
-				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
-				fmt.Println("Vous avez reçu une Potion de soin!")
+				C1.Inventaire = append(C1.Inventaire, "Chapeau de l'aventure")
+				fmt.Println("Vous avez reçu un chapeau de l'aventure!")
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
@@ -105,17 +105,17 @@ func Marchand() {
 		case "8", "Gambison":
 			if C1.Or >= 20 {
 				C1.Or -= 20
-				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
-				fmt.Println("Vous avez reçu une Potion de soin!")
+				C1.Inventaire = append(C1.Inventaire, "Gambison")
+				fmt.Println("Vous avez reçu un gambison!")
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
 			}
-		case "9", "Bottes en peau":
+		case "9", "Bottes en peau de cétacé":
 			if C1.Or >= 20 {
 				C1.Or -= 20
-				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
-				fmt.Println("Vous avez reçu une Potion de soin!")
+				C1.Inventaire = append(C1.Inventaire, "Bottes en peau de cétacé")
+				fmt.Println("Vous avez reçu les bottes en peau de cétacé!")
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
