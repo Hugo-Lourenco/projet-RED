@@ -1,6 +1,5 @@
 package projetred
 
-import "fmt"
 
 var M Monster
 
