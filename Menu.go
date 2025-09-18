@@ -14,9 +14,8 @@ func Menu() {
 		fmt.Println("2) Inventaire")
 		fmt.Println("3) Marchand")
 		fmt.Println("4) Quitter")
-		fmt.Println("5) Retour")
-		fmt.Println("6) Entrainement")
-		fmt.Print("Choix 1, 2, 3, 4, 5 ou 6 ? ")
+		fmt.Println("5) Entrainement")
+		fmt.Print("Choix 1, 2, 3, 4 ou 5  ? ")
 
 		choice, _ := reader.ReadString('\n')
 		choice = strings.TrimSpace(choice)
@@ -31,8 +30,6 @@ func Menu() {
 		case "4":
 			os.Exit(0)
 		case "5":
-			return
-		case "6":
 			goblin := Monstenemy("Goblin")
 			Combat(&C1, &goblin)
 		default:
