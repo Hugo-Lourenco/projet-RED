@@ -66,16 +66,16 @@ func goblinPattern(goblin *Monster, target *Character, turn int) {
 // combat tour par tour joueur vs monstre
 func trainingFight(player *Character, monster *Monster) {
 	turn := 1
-	for player.PV > 0 && monster.PV > 0 {
+	for C1.PV > 0 && M.PV > 0 {
 		fmt.Printf("\n===== Tour %d =====\n", turn)
-		charTurn(player, monster)
-		if monster.PV <= 0 {
-			fmt.Printf("%s est vaincu !\n", monster.Nom)
+		charTurn(&C1, &M)
+		if M.PV <= 0 {
+			fmt.Printf("%s est vaincu !\n", M.Nom)
 			break
 		}
 		goblinPattern(monster, player, turn)
 		if player.PV <= 0 {
-			fmt.Printf("%s est vaincu !\n", player.Nom)
+			fmt.Printf("%s est vaincu !\n", C1.Nom)
 			break
 		}
 		turn++
