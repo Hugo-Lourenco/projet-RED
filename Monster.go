@@ -1,5 +1,6 @@
 package projetred
 
+var M Monster
 type Monster struct {
     Nom			string
 	Niveau		int
@@ -9,10 +10,12 @@ type Monster struct {
 }
 
 func Monstenemy(nom string) Monster {
-	return Monster{
+	M := Monster{
 	Nom: 		"Goblin", 
 	PV_max:		100,
 	PV:			100,
 	Attaque: 	5,
-	}	
+	}
+	return M
 }
+
