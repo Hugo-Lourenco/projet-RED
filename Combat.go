@@ -23,7 +23,6 @@ func Combat(player *Character, monster *Monster) {
 	reader := bufio.NewReader(os.Stdin)
 	turn := 1
 	skillAvailable := true
-
 	for player.PV > 0 && monster.PV > 0 {
 		fmt.Printf("\n===== Tour %d =====\n", turn)
 		fmt.Printf("%s : %d/%d PV\n", player.Nom, player.PV, player.PV_max)
