@@ -49,7 +49,9 @@ func Marchand() {
 			if C1.Or >= 40 {
 				C1.Or -= 40
 				C1.Inventaire = append(C1.Inventaire, "Épée en bois")
-				fmt.Println("Vous avez reçu une épée en bois!")
+				// ajouter +2 dégâts à l'attaque du joueur
+				C1.Attaque += 2
+				fmt.Println("Vous avez reçu une épée en bois! (+2 dégâts)")
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
@@ -58,7 +60,9 @@ func Marchand() {
 			if C1.Or >= 50 && C1.Classe == "Magicien" {
 				C1.Or -= 50
 				C1.Inventaire = append(C1.Inventaire, "Livre de magie")
-				fmt.Println("Vous avez reçu une livre de magie!")
+				// ajouter +4 dégâts à l'attaque du joueur si magicien
+				C1.Attaque += 4
+				fmt.Println("Vous avez reçu un livre de magie! (+4 dégâts)")
 			} else if C1.Or < 50 {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
@@ -70,20 +74,22 @@ func Marchand() {
 			if C1.Or >= 120 {
 				C1.Or -= 120
 				C1.Inventaire = append(C1.Inventaire, "Épée en fer")
-				fmt.Println("Vous avez reçu une épée en fer!")
+				// ajouter +5 dégâts à l'attaque du joueur
+				C1.Attaque += 5
+				fmt.Println("Vous avez reçu une épée en fer! (+5 dégâts)")
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
 			}
 		case "5", "Sac à dos":
-		if C1.Or >= 50 {
-			C1.Or -= 50
-			C1.Max_Inv += 10
-			fmt.Println("Vous avez reçu un sac à dos!")
-		} else {
-			fmt.Println("Vous n'avez pas assez de pièces d'or")
-			continue
-		}
+			if C1.Or >= 50 {
+				C1.Or -= 50
+				C1.Max_Inv += 10
+				fmt.Println("Vous avez reçu un sac à dos!")
+			} else {
+				fmt.Println("Vous n'avez pas assez de pièces d'or")
+				continue
+			}
 		case "6", "Potion de poison":
 			if C1.Or >= 25 {
 				C1.Or -= 25
