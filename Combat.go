@@ -71,7 +71,7 @@ func Combat(player *Character, monster *Monster) {
 				if idx >= 0 && idx < len(player.Inventaire) {
 					item := player.Inventaire[idx]
 					if item == "Potion de soin" {
-						takePot(C1)
+						takePot(&C1)
 						fmt.Printf("Vous utilisez %s et récupérez %d PV !\n", item, 30)
 						break
 					} else if item == "Potion de poison" {
