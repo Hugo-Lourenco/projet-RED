@@ -104,6 +104,8 @@ func Marchand() {
 				C1.Or -= 45
 				C1.Inventaire = append(C1.Inventaire, "Chapeau de l'aventure")
 				fmt.Println("Vous avez reçu un chapeau de l'aventure!")
+				C1.PV_max += 5
+				C1.PV += 5
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
@@ -113,6 +115,8 @@ func Marchand() {
 				C1.Or -= 75
 				C1.Inventaire = append(C1.Inventaire, "Gambison")
 				fmt.Println("Vous avez reçu un gambison!")
+				C1.PV_max += 15
+				C1.PV += 15
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
@@ -122,6 +126,8 @@ func Marchand() {
 				C1.Or -= 55
 				C1.Inventaire = append(C1.Inventaire, "Bottes en peau de cétacé")
 				fmt.Println("Vous avez reçu les bottes en peau de cétacé!")
+				C1.PV_max += 10
+				C1.PV += 10
 			} else {
 				fmt.Println("Vous n'avez pas assez de pièces d'or")
 				continue
