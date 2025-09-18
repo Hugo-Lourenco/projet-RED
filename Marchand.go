@@ -123,7 +123,7 @@ func Marchand() {
 		case "10", "Non merci":
 			return
 		default:
-			fmt.Println("Je ne possède pas cette objet, que voulez vous ?")
+			fmt.Println("J'ai peur de ne pas avoir compris?")
 			continue
 
 		}
