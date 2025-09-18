@@ -1,6 +1,5 @@
 package projetred
 
-
 var M Monster
 
 type Monster struct {
