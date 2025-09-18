@@ -1,12 +1,12 @@
 package projetred
 
-func takePot(c1 Character) {
-	for i := 0; i < len(c1.Inventaire); i++ {
-		if c1.Inventaire[i] == "Potion de soin" {
-			c1.PV += 30
-			c1.Inventaire = append(c1.Inventaire[:i], c1.Inventaire[i+1:]...)
-			if c1.PV > c1.PV_max {
-				c1.PV = c1.PV_max
+func takePot(C1 Character) {
+	for i := 0; i < len(C1.Inventaire); i++ {
+		if C1.Inventaire[i] == "Potion de soin" {
+			C1.PV += 30
+			C1.Inventaire = append(C1.Inventaire[:i], C1.Inventaire[i+1:]...)
+			if C1.PV > C1.PV_max {
+				C1.PV = C1.PV_max
 			}
 			break 
 		}
