@@ -5,19 +5,18 @@ import (
 	"time"
 )
 
-func poisonPot(c *Character) {
+func poisonPot(M *Monster, C1 Character) {
 	for i := 0; i < 3; i++ {
-		c.PV -= 10
-		if c.PV < 0 {
-			c.PV = 0
+		M.PV -= 10
+		if M.PV < 0 {
+			M.PV = 0
 		}
-		fmt.Printf("Effet du poison : %d/%d PV\n", c.PV, c.PV_max)
+		fmt.Printf("Effet du poison : %d/%d PV\n", M.PV, M.PV_max)
 		time.Sleep(1 * time.Second)
 	}
-	// casser la potion de poison après utilisation
-	for i := 0; i < len(c.Inventaire); i++ {
-		if c.Inventaire[i] == "Potion de poison" {
-			c.Inventaire = append(c.Inventaire[:i], c.Inventaire[i+1:]...)
+	for i := 0; i < len(C1.Inventaire); i++ {
+		if C1.Inventaire[i] == "Potion de poison" {
+			C1.Inventaire = append(C1.Inventaire[:i], C1.Inventaire[i+1:]...)
 			break
 		}
 	}
