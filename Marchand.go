@@ -26,7 +26,11 @@ func Marchand() {
 		if C1.Max_Inv < 40 {
 			fmt.Println("5) Sac à dos à 50")
 		}
-		fmt.Println("6) Retour")
+		fmt.Println("6) Potion de poison à 25 pièces d'or")
+		fmt.Println("7) Chapeau de l'aventure à 45 pièces d'or")
+		fmt.Println("8) Gambison à 75 pièces d'or")
+		fmt.Println("9) Bottes en peau de cétacé à 55 pièces d'or")
+		fmt.Println("10) Non merci, je ne peux rien acheter")
 
 		choixRaw, _ := reader.ReadString('\n')
 		choix := strings.ToLower(strings.TrimSpace(choixRaw))
@@ -80,7 +84,43 @@ func Marchand() {
 			fmt.Println("Vous n'avez pas assez de pièces d'or")
 			continue
 		}
-		case "6", "retour":
+		case "6", "Potion de poison":
+			if C1.Or >= 20 {
+				C1.Or -= 20
+				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
+				fmt.Println("Vous avez reçu une Potion de soin!")
+			} else {
+				fmt.Println("Vous n'avez pas assez de pièces d'or")
+				continue
+			}
+		case "7", "Chapeau de l'aventure":
+			if C1.Or >= 20 {
+				C1.Or -= 20
+				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
+				fmt.Println("Vous avez reçu une Potion de soin!")
+			} else {
+				fmt.Println("Vous n'avez pas assez de pièces d'or")
+				continue
+			}
+		case "8", "Gambison":
+			if C1.Or >= 20 {
+				C1.Or -= 20
+				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
+				fmt.Println("Vous avez reçu une Potion de soin!")
+			} else {
+				fmt.Println("Vous n'avez pas assez de pièces d'or")
+				continue
+			}
+		case "9", "Bottes en peau":
+			if C1.Or >= 20 {
+				C1.Or -= 20
+				C1.Inventaire = append(C1.Inventaire, "Potion de soin")
+				fmt.Println("Vous avez reçu une Potion de soin!")
+			} else {
+				fmt.Println("Vous n'avez pas assez de pièces d'or")
+				continue
+			}
+		case "10", "Non merci":
 			return
 		default:
 			fmt.Println("Je ne possède pas cette objet, que voulez vous ?")
